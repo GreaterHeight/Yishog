@@ -1,6 +1,6 @@
 /* ============================================================
    Yishog Integrated Services — Main Stylesheet
-   Design: Navy/Amber industrial identity
+   Design: Crimson/Maroon brand identity
    Typefaces: Barlow Condensed (headings) + Inter (body)
    ============================================================ */
 
@@ -8,17 +8,17 @@
 
 /* ── Design Tokens ─────────────────────────────────────────── */
 :root {
-  --navy:        #0D2137;
-  --navy-mid:    #162d48;
-  --navy-light:  #1e3d5c;
-  --amber:       #E07B30;
-  --amber-dark:  #c2681f;
-  --amber-light: #f5a05a;
-  --steel:       #4a7fa5;
-  --off-white:   #f5f7fa;
-  --border:      #dce3eb;
-  --text:        #1c2b3a;
-  --muted:       #5f7183;
+  --navy:        #1b0000;
+  --navy-mid:    #350000;
+  --navy-light:  #540000;
+  --amber:       #b30000;
+  --amber-dark:  #880000;
+  --amber-light: #e05555;
+  --steel:       #993333;
+  --off-white:   #f7f7f7;
+  --border:      #ddd8d8;
+  --text:        #1a0a0a;
+  --muted:       #6b5555;
   --white:       #ffffff;
 
   --font-display: 'Barlow Condensed', sans-serif;
@@ -26,8 +26,8 @@
 
   --radius-sm:   3px;
   --radius:      6px;
-  --shadow:      0 2px 12px rgba(13,33,55,0.10);
-  --shadow-lg:   0 6px 30px rgba(13,33,55,0.16);
+  --shadow:      0 2px 12px rgba(179,0,0,0.10);
+  --shadow-lg:   0 6px 30px rgba(27,0,0,0.16);
 
   --header-h:    72px;
   --header-h-sm: 58px;
@@ -82,7 +82,7 @@ small { font-size: 0.875rem; }
 /* ── Buttons ───────────────────────────────────────────────── */
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; letter-spacing: 0.02em; border-radius: var(--radius-sm); transition: background 0.18s, color 0.18s, transform 0.15s; }
 .btn:hover { transform: translateY(-1px); }
-.btn--amber { background: var(--amber); color: var(--white); }
+.btn--amber { background: var(--amber); /* crimson mark */ color: var(--white); }
 .btn--amber:hover { background: var(--amber-dark); }
 .btn--outline-white { border: 2px solid rgba(255,255,255,0.7); color: var(--white); }
 .btn--outline-white:hover { background: var(--white); color: var(--navy); }
@@ -95,7 +95,7 @@ small { font-size: 0.875rem; }
 
 /* ── Amber underline on headings ───────────────────────────── */
 .heading-rule { display: inline-block; position: relative; }
-.heading-rule::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 48px; height: 3px; background: var(--amber); }
+.heading-rule::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 48px; height: 3px; background: var(--amber); /* crimson mark */ }
 
 /* ── Site Header ───────────────────────────────────────────── */
 #site-header {
@@ -117,7 +117,7 @@ small { font-size: 0.875rem; }
 /* Logo */
 .site-logo { display: flex; align-items: center; gap: 10px; }
 .site-logo__mark {
-  width: 40px; height: 40px; background: var(--amber);
+  width: 40px; height: 40px; background: var(--amber); /* crimson mark */
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-display); font-size: 1.4rem; font-weight: 800;
   color: var(--white); border-radius: 2px; flex-shrink: 0;
@@ -179,11 +179,10 @@ small { font-size: 0.875rem; }
 }
 .home-hero__bg {
   position: absolute; inset: 0; background-size: cover; background-position: center;
-  background-image: url('assets/images/Yishog-Home-Page-Banner.jpg');
 }
 .home-hero__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(105deg, rgba(13,33,55,0.92) 40%, rgba(13,33,55,0.55));
+  background: linear-gradient(105deg, rgba(27,0,0,0.92) 40%, rgba(27,0,0,0.55));
 }
 .home-hero__content { position: relative; z-index: 1; max-width: 680px; }
 .home-hero__eyebrow { font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); margin-bottom: 14px; }
@@ -192,7 +191,7 @@ small { font-size: 0.875rem; }
 .home-hero p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 36px; max-width: 500px; }
 .home-hero__actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .home-hero__badge { display: inline-flex; align-items: center; gap: 10px; margin-top: 48px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 40px; padding: 8px 20px 8px 8px; }
-.home-hero__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+.home-hero__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); /* crimson mark */ flex-shrink: 0; }
 .home-hero__badge span { font-size: 0.88rem; color: rgba(255,255,255,0.8); }
 
 /* ── Vision/Mission/Values Tabs ────────────────────────────── */
@@ -201,11 +200,11 @@ small { font-size: 0.875rem; }
 .vmv-card { padding: 40px 36px; border-right: 1px solid var(--border); background: var(--white); transition: background 0.2s; }
 .vmv-card:last-child { border-right: none; }
 .vmv-card__number { font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; color: var(--off-white); line-height: 1; margin-bottom: -8px; }
-.vmv-card__number--accent { color: rgba(224,123,48,0.12); }
+.vmv-card__number--accent { color: rgba(179,0,0,0.12); }
 .vmv-card h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 12px; }
 .vmv-card p { font-size: 0.95rem; color: var(--muted); max-width: none; }
 .vmv-card:hover { background: var(--off-white); }
-.vmv-card__icon { width: 44px; height: 44px; background: rgba(224,123,48,0.10); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.vmv-card__icon { width: 44px; height: 44px; background: rgba(179,0,0,0.10); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
 .vmv-card__icon svg { color: var(--amber); }
 
 /* ── Products Grid ─────────────────────────────────────────── */
@@ -226,7 +225,7 @@ small { font-size: 0.875rem; }
 .industry-card { position: relative; height: 220px; overflow: hidden; border-radius: var(--radius); }
 .industry-card__bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.4s; }
 .industry-card:hover .industry-card__bg { transform: scale(1.06); }
-.industry-card__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,33,55,0.85) 30%, transparent); }
+.industry-card__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,0,0,0.82) 30%, transparent); }
 .industry-card__label { position: absolute; bottom: 16px; left: 16px; right: 16px; font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--white); line-height: 1.2; }
 
 /* ── Stats Counter Row ─────────────────────────────────────── */
@@ -246,7 +245,7 @@ small { font-size: 0.875rem; }
 .product-entry__content p { color: var(--muted); font-size: 0.95rem; margin-bottom: 14px; }
 .product-entry__content ul { padding-left: 0; margin-bottom: 20px; }
 .product-entry__content ul li { padding: 4px 0 4px 20px; position: relative; font-size: 0.92rem; color: var(--muted); }
-.product-entry__content ul li::before { content: ''; position: absolute; left: 0; top: 12px; width: 8px; height: 2px; background: var(--amber); }
+.product-entry__content ul li::before { content: ''; position: absolute; left: 0; top: 12px; width: 8px; height: 2px; background: var(--amber); /* crimson mark */ }
 
 /* Spec Tables */
 .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 16px 0 24px; }
@@ -288,7 +287,7 @@ small { font-size: 0.875rem; }
 .what-we-do-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .wwd-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 28px; transition: box-shadow 0.2s; border-top: 3px solid transparent; }
 .wwd-card:hover { box-shadow: var(--shadow); border-top-color: var(--amber); }
-.wwd-card__icon { width: 48px; height: 48px; background: rgba(224,123,48,0.10); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.wwd-card__icon { width: 48px; height: 48px; background: rgba(179,0,0,0.10); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
 .wwd-card h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 10px; }
 .wwd-card p { font-size: 0.9rem; color: var(--muted); }
 .quality-block { background: var(--navy); color: var(--white); border-radius: var(--radius); padding: 56px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -297,7 +296,7 @@ small { font-size: 0.875rem; }
 .quality-block__img img { border-radius: var(--radius-sm); height: 300px; object-fit: cover; width: 100%; }
 
 /* ── CTA Strip ─────────────────────────────────────────────── */
-.cta-strip { background: var(--amber); padding: 52px 0; }
+.cta-strip { background: var(--amber); /* crimson mark */ padding: 52px 0; }
 .cta-strip__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
 .cta-strip h2 { color: var(--white); margin-bottom: 6px; }
 .cta-strip p { color: rgba(255,255,255,0.85); max-width: none; }
@@ -325,9 +324,9 @@ small { font-size: 0.875rem; }
 #back-to-top {
   position: fixed; bottom: 28px; right: 28px; z-index: 900;
   width: 46px; height: 46px; border-radius: 50%;
-  background: var(--amber); color: var(--white);
+  background: var(--amber); /* crimson mark */ color: var(--white);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; box-shadow: 0 3px 14px rgba(224,123,48,0.4);
+  font-size: 1.1rem; box-shadow: 0 3px 14px rgba(179,0,0,0.4);
   opacity: 0; visibility: hidden; transform: translateY(12px);
   transition: opacity 0.25s, transform 0.25s, visibility 0.25s, background 0.15s;
 }
@@ -414,4 +413,16 @@ small { font-size: 0.875rem; }
   .contact-form { padding: 24px; }
   .quality-block { padding: 36px 24px; }
   #back-to-top { bottom: 18px; right: 18px; }
+}
+
+/* ── Logo Image Override ───────────────────────────────────── */
+.site-logo__img {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1); /* make logo white against dark header */
+}
+#site-header.scrolled .site-logo__img,
+#site-header.header--solid .site-logo__img {
+  filter: brightness(0) invert(1);
 }
